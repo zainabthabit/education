@@ -1,0 +1,6 @@
+node_modules/
+.env/
+static\images
+package-lock.json
+package.json
+accountKey.json
