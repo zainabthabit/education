@@ -5,10 +5,10 @@ const LevelsSchema = new Schema({
   name: {
     type: String,
   },
-  user: [
+  video: [
     {
       type: Schema.Types.ObjectId,
-      ref: "User",
+      ref: "Video",
     },
   ],
 });

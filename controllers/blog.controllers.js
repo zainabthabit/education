@@ -23,12 +23,12 @@ exports.createBlog = async (req, res, next) => {
     };
 
     if (req.file) {
-      const imgOrVidUrl = await getFirebaseImgUrl(
-        "blog-imgOrVid",
+      const imgUrl = await getFirebaseImgUrl(
+        "blog-img",
         req.file.path,
         req.file.originalname
       );
-      newBlogData.imgOrVid = imgOrVidUrl;
+      newBlogData.img = imgUrl;
     }
     const newBlog = await Blog.create(newBlogData);
     res.status(201).json(newBlog);

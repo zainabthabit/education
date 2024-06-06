@@ -21,6 +21,20 @@ const UserSchema = new Schema({
   password: {
     type: String,
   },
+  roles: {
+    type: String,
+    default: "user",
+  },
+  role: {
+    type: Schema.Types.ObjectId,
+    ref: "Role",
+  },
+  level: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Level",
+    },
+  ],
 });
 
 const User = model("User", UserSchema);

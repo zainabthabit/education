@@ -21,7 +21,7 @@ const BlogSchema = new Schema({
   rating: {
     type: Number,
   },
-  imgOrVid: {
+  img: {
     type: String,
   },
 
